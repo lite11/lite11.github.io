@@ -1,0 +1,149 @@
+
+
+<html>
+    <title>Thomas cook lite</title>
+        <link rel="manifest" href="manifest.json">
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+         <style>
+           body,html{
+              width:100%;height:100%;
+               padding:0;margin:0; background-color:#e5e5e5;
+                   
+           overflow:hidden;}
+        
+             .header{
+                 top:0%;
+                 left:0px;
+                 right:0px;
+                 height:50px;
+                 //width:100%;
+                 background-color:#097492;
+                 //border-bottom-style: groove;
+                 //border-bottom-width: thin;
+                 //border-color: #666;
+                 
+                 //background-image: url("m7.jpg");
+                  margin-bottom:5%;
+                 position: fixed;
+              //opacity: 0.5;
+             }
+             
+             p{
+                 font-style: normal;
+                 //font-size:60px;
+                 color:black;;
+                 //padding-left: 9px;
+                 //padding-bottom: 10px;
+                 //float:left;
+                     text-align: center;
+             }
+                 
+             .content{
+                 //padding:10px;
+                margin-left:2%;
+                margin-right:2%;
+               margin-top:5%;
+               overflow-y:scroll;
+               overflow-x: no-display;
+              // overflow:hidden;
+               //bottom:5px;
+                //padding-top: 20px;
+               // margin-bottom:20px;
+              
+                 background-color:white;
+                    // width:90%;height:90%
+             }
+             
+             img#menu{
+                  padding-top: 17px;
+                  padding-left: 17px;
+                  padding-right: 17px;
+                  padding-bottom: 5px;
+                  float:left
+             }
+             
+             img{
+                 padding-top: 17px;
+                  padding-left: 12px;
+                  padding-right: 17px;
+                  padding-bottom: 5px;
+                  float:right;
+                     
+             }
+             
+             div#content{
+                 color:black;
+                 font-size:18px; 
+                 padding:1px; 
+             }
+             
+    </style>
+    <script>
+        $(document).ready(function(){
+        
+         $.ajax({
+
+   url: 'holiday.json',
+    type: 'get',
+    dataType: 'json',
+    //data: {
+    // format: 'json'
+  // },
+   
+
+    //dataType: 'json',
+    //format: 'json',
+    error: function(jqXHR, textStatus, errorThrown) {
+    alert(textStatus + ': ' + errorThrown);
+    console.log(textStatus + ': ' + errorThrown);
+    },
+
+    success: function(data){
+       //data = JSON.parse(data);
+
+ 
+     var out='';
+      for(i = 0; i < data.length; i++) {
+        
+        
+        
+      out+= /*i+data[i].minimumPricePackageClassId*/"<br><b>Details: </b>"+data[i].packageDetail.pkgName+"<br><b>StartingPrice:</b> "+data[i].minimumStartingPrice+/*"<br> <b>PackageDetail adultAdvancePayable:</b> "+data[i].packageDetail.adultAdvancePayable+"<br><b> AdultAdvancePayablePer:</b> "+data[i].packageDetail.adultAdvancePayablePer*/"<br>"+"<img src="+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.tcilMstHolidayAccomodationImageCollection[0].imagePath+">"+" <br><b>AdvancePaymentDiscAmt:</b> "+data[i].packageDetail.advancePaymentDiscAmt+/*"<br><b> ChildAdvancePayable:</b> "+data[i].packageDetail.childAdvancePayable+data[i].packageDetail.childAdvancePayablePer*/"<br><b> Duration: </b>"+data[i].packageDetail.duration+"<br><b> FullPaymentDiscAmt: </b>"+data[i].packageDetail.fullPaymentDiscAmt+"<br><b> AdvancePayable:</b> "+data[i].packageDetail.isAdvancePayable+"<br><b> FlightIncluded:</b> "+data[i].packageDetail.isFlightIncluded+/*"<br><b> FullPayable:</b> "+data[i].packageDetail.isFullPayable*/" <br><b>HotelIncluded:</b> "+data[i].packageDetail.isHotelIncluded+" <br><b>MealsIncluded:</b> "+data[i].packageDetail.isMealsIncluded+" <br><b>PackageClassDelux:</b> "+data[i].packageDetail.isPackageClassDelux+" <br><b>PackageClassPremium:</b> "+data[i].packageDetail.isPackageClassPremium+data[i].packageDetail.isPackageClassStandard+"<br><b> SightseeingIncluded:</b> "+data[i].packageDetail.isSightseeingIncluded+" <br><b>SpecialDiscount: </b>"+data[i].packageDetail.isSpecialDiscount+"<br><b> TcilRecomended:</b> "+data[i].packageDetail.isTcilRecomended+"<br><b>TransferIncluded: </b>"+data[i].packageDetail.isTransferIncluded+"<br><b>VisaIncluded:</b> "+data[i].packageDetail.isVisaIncluded+/*data[i].packageDetail.languageId.name"<b>PackageDetails</b>"+/*data[i].packageDetail.packageId+data[i].packageDetail.packageThumbnailImage*/" <br><b>PlacesCovered:</b> "+data[i].packageDetail.placesCovered+"<br>"
+      +"<b>HolidayAccomodation</b><br>"+"<b> Address:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.address+"<br> <b>City:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.city+/*"<br><b> Country:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.country+" <br><b>HotelID:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.hotelId*/" <br><b>HotelName:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.hotelName+"<br><b>Overview:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.overview+/*data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.starRating*/"<br><b>State:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.state+"<hr>";
+      }
+
+
+
+ document.getElementById("content").innerHTML=out;
+
+
+        }
+        
+    });
+        });
+    </script>  
+    </head>
+    
+   
+    <body>
+        
+        <header class="header">
+            <a href="menu.html"><img src="icons/1460037806_Hamburger.png" id="menu"  alt=""/></a>
+             
+            <img src="icons/1457957246_shopping-cart.png" alt=""/>
+            <img src="icons/1457957259_Profile01.png" alt=""/>
+            
+            
+           
+        </header>
+        <br>
+        <div id="wrapper" class="content">
+            <br><br><div id="content"></div>
+        </div>
+        
+    </body>
+    
+</html>
+    

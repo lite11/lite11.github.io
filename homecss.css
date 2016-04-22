@@ -1,0 +1,149 @@
+ 
+html{
+    overflow:hidden;
+}
+   
+body {
+     background-image: url("m7.jpg");
+    padding:0;margin:0;
+    //background: url("splash/n1.jpg") fixed center;
+    //background-color: #cccccc;
+        //background-repeat: no-repeat;
+}
+div#splash{
+    font-size:20px;
+   color:white;
+}
+
+/*div#litesearch{
+    bottom:50px;
+}*/
+
+div#lite{
+    
+       margin:7em 0 0 .5em; 
+    font-size:30px;
+   color:white;
+
+}
+
+#search-text-input{
+    border-top:thin solid  #e5e5e5;
+    border-right:thin solid #e5e5e5;
+    border-bottom:0;
+    border-left:thin solid  #e5e5e5;
+    box-shadow:0px 1px 1px 1px #e5e5e5;
+   // float:left;
+    height:17px;
+    margin:.8em 0 0 .5em; 
+    outline:0;
+        padding:1em 0 .5em .6em; 
+    width:230px; 
+   // padding:.4em 0 .4em .6em; 
+    //width:183px; 
+   // margin-left:auto;
+   // margin-right:auto;
+   
+}
+  
+#button-holder{
+    background-color:#f1f1f1;
+    border-top:thin solid #e5e5e5;
+    box-shadow:1px 1px 1px 1px #e5e5e5;
+    cursor:pointer;
+    //float:left;
+    height:27px;
+    margin:11px 0 0 0;
+    text-align:center;
+    width:50px;
+  
+}
+  
+#button-holder img{
+    margin:4px;
+    width:20px; 
+   
+}
+
+div#icons{        //not used
+        bottom: 5px;
+  
+  margin:5px;
+  
+ 
+}
+
+#pic{
+    //margin-right: 0%;
+     float:right;
+    // image-orientation: 30px 30px;
+     //padding-bottom: 2px;
+     //position:fixed;
+   padding-right: 10px;
+     padding-left: 10px;
+  
+}
+
+a{
+     color: black;
+      font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+@media all and (display-mode:standalone) {
+    p#hs1{
+      display:none;
+    }
+    
+     div#hs{
+      display:none;
+    }
+    
+    
+
+}
+
+
+
+@media all and (display-mode:browser) {
+   .flip
+{
+line-height: 30px;
+margin:auto;
+font-size:16px;
+padding:5px;
+text-align:center;
+//background:#555;
+border:solid 1px #666;
+color:#FFFFFF;
+ background-image: url("m7.jpg");
+
+border-radius:3px;
+cursor:pointer;
+}
+
+
+.panel
+{
+//height:120px;
+line-height: 30px;
+margin:auto;
+font-size:16px;
+padding:5px;
+text-align:left;
+border-radius:8px;
+border:solid 3px #666;
+color:#FFFFFF;
+display:none;
+cursor:pointer;
+position: relative;
+//background-color: #ffffff;
+background-image: url("m7.jpg");
+}
+
+//new
+
+}
+
