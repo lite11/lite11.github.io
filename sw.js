@@ -8,7 +8,7 @@
 
 var urlstocache1=[
 
-   
+   'index.html',
    'app_1.js',
    //'sw.js',
    //'manifest.json',
