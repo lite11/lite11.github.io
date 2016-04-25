@@ -12,7 +12,7 @@ var urlstocache1=[
    'app_1.js',
    //'sw.js',
    //'manifest.json',
-   'home.html',
+   //'home.html',
    'homecss.css',
    
   
