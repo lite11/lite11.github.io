@@ -5,76 +5,126 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <title>Thomas cook lite</title>
-        <link rel="manifest" href="manifest.json">
-      <link rel="stylesheet" type="text/css" href="homecss.css" media="screen"/>
-<meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     
-       
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+<head>
+    <link rel="manifest" href="manifest.json">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
-        
-
-        
-            
-
-    </head>
+<style>
     
-    <body>
-          
-        <br>
+    html{
+    overflow:hidden;
+}
+   
+body {
+     background-image: url("m7.jpg");
+    padding:0;margin:0;
+    //background: url("splash/n1.jpg") fixed center;
+    //background-color: #cccccc;
+        //background-repeat: no-repeat;
+}
+ p{
+        font-size:30px;
+   color:white;
+    }
+#pic{
+    //margin-right: 0%;
+     float:right;
+    // image-orientation: 30px 30px;
+     //padding-bottom: 2px;
+     //position:fixed;
+   padding-right: 10px;
+     padding-left: 10px;
+  
+}
 
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 144px;
+    border:1px black solid;
+}
 
-                  <center>
-                      <!--<div  id="splash" hidden>  <img src="icons/newlogo.png" alt=""/><br><br><br><b>Don't just book it<br>Thomas Cook it</b><br><br><br></div>-->
-                      
-              
-              
-        <div id="home">  <!--parent div-->
-            
-            
-        <!--<img src="1457957314_iPad.png" id='pic' alt="homescreen"/>
-        <div id='hs' hidden> <img src="splash/shape.png"  alt="homescreen"/></div>-->
-        
-          <!--<div id="hs"> Add to Homescreen by clicking on add to homescreen option in the <img src="icons/3dots.png" alt=""/> tab</div>-->
-          
-          
-        
-         <!--<br><br><br><br><br> <br><br><br><br><br>-->
-         <img src="icons/1457957246_shopping-cart.png" id="pic" alt=""/>
-         
-             <a href="menu.html"><img src="icons/1460037806_Hamburger.png" id="pic" alt=""/></a>
-             <img src="icons/1457957259_Profile01.png" id="pic" alt=""/>
-            
-         
-         
-         <div id="litesearch"><br>  <div id="lite"> <img src="icons/smalllogo.png" alt=""/><br><b>Thomas Cook</b>  <i><sup>Lite</sup></i> </div> <br>
-      
-                   <input type='text' placeholder='Search...' id='search-text-input' /></div>
-         <!--<div id='button-holder' >
-          <img src='1457954863_001_38.gif' />
-        </div>-->
-         <!--<br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
-         
-         
-         <!--<div id >Add to Homescreen <img src="1457957314_iPad.png"  alt="homescreen"/></div><img src="1457970857_double-arrow-up.png" alt=""/><a href="index.html">Holidays</a>
-        <div  class="panel" id="hs"></div>
-         <p class="flip" id="hs1">Add to Homescreen</p>-->
-         
-    
-         
-         
-            
-            
-        </div>
-                    </center>
+.dropbtn:focus {
+ border:1px red solid;
+}
 
-   <script src="app_1.js"></script>
-    </body>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 160px;
+   // overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 9px;
+    text-decoration: none;
+    display: block;
+    float:left;
+   // width: 160px;
+  // border:1px black solid;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;    width: 160px;}
+</style>
+</head>
+<body>
+    <br>
+     <a href="menu.html"><img src="icons/1460037806_Hamburger.png" id="pic" alt=""/></a>
+             <a href="signup.html"><img src="icons/1457957259_Profile01.png" id="pic" alt=""/></a>
+<center><br>
+    <br><br><br><br><br><br><br><br><br>
+<p><img src="icons/smalllogo.png" alt=""/><br><b>Thomas Cook</b>  <i><sup>Lite</sup></i> <br> </p>
+        <div class="dropdown">
+           
+  <input type="input" onclick="myFunction()" class="dropbtn" placeholder="Search ...">
+  <div id="myDropdown" class="dropdown-content">
+    <a href="menu.html">Exotic India</a>
+    <a href="menu.html">Nepal and Sri Lanka Holidays</a>
+    <a href="menu.html">Dubai Holidays</a>
+    <a href="menu.html">Cruise Holidays</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</center>
+<script src="app_1.js"></script>
+</body>
 </html>
+
