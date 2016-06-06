@@ -8,11 +8,11 @@
 
 var urlstocache1=[
 
-   'index.html',
+   
    'app_1.js',
    //'sw.js',
    //'manifest.json',
-   //'home.html',
+   'home.html',
    'homecss.css',
    
   
@@ -25,11 +25,12 @@ var urlstocache1=[
 //added
    'icons/1457957259_Profile01.png',
    'icons/1460037806_Hamburger.png',
-   'icons/1457957246_shopping-cart.png',
+   //'icons/1457957246_shopping-cart.png',
    'icons/smalllogo.png',
    'menu.html',
    'appshell.html',
-   'icons/m7.jpg'
+   'icons/m7.jpg',
+   'icons/default-avatar-250x250.png'
 ];
 
 //////////////////////////////
@@ -78,7 +79,11 @@ var urlstocache3=[
    'icons/newlogo - Copy (4).png',
    'icons/newlogo144x144.png',
    'icons/newlogo.png',
-   'icons/newlogo225x225.png'
+   'icons/newlogo225x225.png',
+   
+   //new signup
+   
+   'signup.html'
    
 ];
 
@@ -168,23 +173,23 @@ self.addEventListener('fetch', function(event) {
   })
   );
 });
+
+
+self.addEventListener('push', function(event) {  
+  console.log('Received a push message', event);
   
+
+var title = 'Kerala Back Waters';  
+  var body = 'Enjoy the Holidays with your family on the back waters of Kerala , Hurry up and Book now on your Thomas Cook Lite App!';  
+  var icon = 'icons/newlogo144x144.png';  
   
 
+  event.waitUntil(  
+    self.registration.showNotification(title, {  
+      body: body,  
+      icon: icon  
+       
+    })  
+  );  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  });  
