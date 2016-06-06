@@ -42,7 +42,7 @@
 
     ],
    
-    "start_url": "home.html",
+    "start_url": "index.html",
    
     "orientation": "portrait",
     "display": "standalone",
