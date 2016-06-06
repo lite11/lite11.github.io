@@ -42,11 +42,13 @@
 
     ],
    
-    "start_url": "index.html",
+    "start_url": "home.html",
    
     "orientation": "portrait",
     "display": "standalone",
     "theme_color": "#006cb4",
+        "gcm_sender_id": "541650285651",
+
     "background_color": "#006cb4"
 }
 
