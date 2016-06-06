@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
     var _API_KEY="AIzaSyCK1onbRfT4hiDEI8iGPshcJ8BiucUvqE8";
 
   navigator.serviceWorker.register('sw.js', {
-    scope: '/TcLite/'
+    scope: '/lite11/'
   }).then(function(r) {
       console.log(r);
    console.log("Registeration successful");
