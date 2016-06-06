@@ -1,10 +1,10 @@
  
  //home
      var CACHE_VERSION = 6;
-          var CURRENT_CACHES11 = {
+          var CURRENT_CACHES111 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
                                 };
-                                var cacheName=CURRENT_CACHES11;
+                                var cacheName=CURRENT_CACHES111;
 
 var urlstocache1=[
 
@@ -37,10 +37,10 @@ var urlstocache1=[
 
 //index menu
  var CACHE_VERSION = 6;
-          var CURRENT_CACHES22 = {
+          var CURRENT_CACHES222 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
                                 };
-                                var cacheName1=CURRENT_CACHES22;
+                                var cacheName1=CURRENT_CACHES222;
 
 var urlstocache2=[
     
@@ -60,10 +60,10 @@ var urlstocache2=[
 
 //default
  var CACHE_VERSION = 6;
-          var CURRENT_CACHES33 = {
+          var CURRENT_CACHES333 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
                                 };
-                                var cacheName2=CURRENT_CACHES33;
+                                var cacheName2=CURRENT_CACHES333;
 
 var urlstocache3=[
     
@@ -90,18 +90,18 @@ var urlstocache3=[
 self.addEventListener('install', function(event) {
     console.log('Installing:');
   event.waitUntil(
-    caches.open('CURRENT_CACHES11').then(function(cache) {
+    caches.open('CURRENT_CACHES111').then(function(cache) {
          console.log('Added to cache:');
       return cache.addAll(urlstocache1);
        
     }),
-             caches.open('CURRENT_CACHES22').then(function(cache) {
+             caches.open('CURRENT_CACHES222').then(function(cache) {
          console.log('Added to cache:');
       return cache.addAll(urlstocache2);
        
     }),
     
-      caches.open('CURRENT_CACHES33').then(function(cache) {
+      caches.open('CURRENT_CACHES333').then(function(cache) {
          console.log('Added to cache:');
       return cache.addAll(urlstocache3);
        
@@ -112,16 +112,16 @@ self.addEventListener('install', function(event) {
 
 
 self.addEventListener('activate', function(event) {
-     var expectedCacheNames1 = Object.keys(CURRENT_CACHES11).map(function(key) {
-    return CURRENT_CACHES11[key];
+     var expectedCacheNames1 = Object.keys(CURRENT_CACHES111).map(function(key) {
+    return CURRENT_CACHES111[key];
   });
 
- var expectedCacheNames2 = Object.keys(CURRENT_CACHES22).map(function(key) {
-    return CURRENT_CACHES22[key];
+ var expectedCacheNames2 = Object.keys(CURRENT_CACHES222).map(function(key) {
+    return CURRENT_CACHES222[key];
   });
   
-   var expectedCacheNames3 = Object.keys(CURRENT_CACHES33).map(function(key) {
-    return CURRENT_CACHES33[key];
+   var expectedCacheNames3 = Object.keys(CURRENT_CACHES333).map(function(key) {
+    return CURRENT_CACHES333[key];
   });
   
   /*event.waitUntil(
@@ -159,7 +159,7 @@ self.addEventListener('fetch', function(event) {
      return fetch(event.request,{ mode: 'no-cors' }).then(function(response) {
         console.log('Response from network is:', response.url);
 //
-       return caches.open('CURRENT_CACHES33').then(function(cache) {
+       return caches.open('CURRENT_CACHES333').then(function(cache) {
             cache.put(event.request.url, response.clone());
             console.log('[ServiceWorker] Fetched&Cached Data');
             return response;
