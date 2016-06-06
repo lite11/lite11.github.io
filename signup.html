@@ -1,0 +1,219 @@
+
+
+<html>
+    <title>Thomas cook lite</title>
+        <link rel="manifest" href="manifest.json">
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+         <style>
+           body,html{
+              width:100%;height:100%;
+               padding:0;margin:0; //background-color:#e5e5e5;
+                   background-color:#097492;
+                   
+           overflow:hidden;}
+        
+             .header{
+                 top:0%;
+                 left:0px;
+                 right:0px;
+                 height:50px;
+                 //width:100%;
+                 background-color:#097492;
+                 //border-bottom-style: groove;
+                 //border-bottom-width: thin;
+                 //border-color: #666;
+                 
+                 //background-image: url("m7.jpg");
+                  margin-bottom:5%;
+                 position: fixed;
+              //opacity: 0.5;
+             }
+             
+             p{
+                 font-style: normal;
+                 //font-size:60px;
+                 color:black;;
+                 //padding-left: 9px;
+                 //padding-bottom: 10px;
+                 //float:left;
+                     text-align: center;
+             }
+                 
+             .content{
+                 //padding:10px;
+                margin-left:2%;
+                margin-right:2%;
+               margin-top:5%;
+               overflow-y:scroll;
+               overflow-x: no-display;
+              // overflow:hidden;
+               //bottom:5px;
+                //padding-top: 20px;
+               // margin-bottom:20px;
+              
+                 background-color:white;
+                    // width:90%;height:90%
+             }
+             
+             img#menu{
+                  padding-top: 17px;
+                  padding-left: 17px;
+                  padding-right: 17px;
+                  padding-bottom: 5px;
+                  float:left
+             }
+             
+             img#menu1{
+                 padding-top: 17px;
+                  padding-left: 12px;
+                  padding-right: 17px;
+                  padding-bottom: 5px;
+                  float:right;
+                     
+             }
+             
+               img#my{
+                // padding-top: 17px;
+                 // padding-left: 12px;
+                 // padding-right: 17px;
+                 // padding-bottom: 5px;
+                  //float:right;
+                    width:100%;
+                    height:250px;
+                   // margin:5px;
+             }
+             
+             img#inc{
+                 padding-top: 17px;
+                  padding-left: 17px;
+                  padding-right: 17px; 
+             }
+             
+             
+             div#content{
+                 color:black;
+                 font-size:20px; 
+                 padding:5px; 
+             }
+             
+             .box{
+                 border:2px #555 solid;
+                 width: 150px;
+                 height:37px;
+                 margin: 12px;
+                 font-size: 20px;
+                 padding: 2px;
+             }
+             
+             .checkbox{
+                 border:2px #555 solid;
+                 width: 90px;
+                 height:30px;
+                 margin:2px;
+             }
+             
+             .submit{
+                 border:2px #097492 solid;
+                 background-color: #009999;
+                 width: 100px;
+                 height:40px;
+                 margin: 10px;
+                 color:white;
+                 font-size: 16px;
+             }
+             
+             .image{
+                border:2px #555 solid;
+                 width: 300px;
+                 height:250px;
+                 background-image: url("icons/iconsfinder/pcam.png");
+                // margin:2px; 
+             }
+             
+             #fixed{
+                 border: #555 solid;
+                 width:100%;
+                 height:100%;
+                 position: absolute;
+             }
+             
+             #moving{
+                 border: #555 solid;
+                 width:100%;
+                 height:100%;
+                 position: absolute;
+             }
+             
+             #statusy{
+                color: #009999; 
+             } 
+             
+             #statusn{
+                 
+                     color: #990000;
+             } 
+             
+             #beforeclick{
+                 
+                 color: #33ccff;
+             }
+             
+    </style>
+   <script>
+                    
+                    
+                    </script>
+    </head>
+    
+   
+    <body>
+        
+        <header class="header">
+            <a href="menu.html"><img src="icons/1460037806_Hamburger.png" id="menu"  alt=""/></a>
+             
+           <!-- <img src="icons/1457957246_shopping-cart.png" id="menu1" alt=""/>
+            <img src="icons/1457957259_Profile01.png" id="menu1" alt=""/>-->
+            
+            
+           
+        </header>
+        <br>
+        <div id="wrapper" class="content">
+            <br><br><div id="content">
+                
+                
+                    <center>
+                        <img src="icons/default-avatar-250x250.png" alt=""/><br>
+                        
+                        <!--<input type="file" class="image" name="myImage" accept="image/*" /> <br><br>-->
+                    <input type="text" class="box" name="fname" id="fname" placeholder="First Name" >
+                    <input type="text" class="box" name="lname" id="lname" placeholder="Last Name" ><br>
+                    
+                    <input  name="email" class="box" id="email" type="email" placeholder="Email Address"  ><br>
+                    +91<input pattern="[0-9]{10}" class="box" name="mob" id="mob" type="text" placeholder="Mobile No" title="Mobile No"  ><br>
+                    <br><input type="checkbox" id="check" class="checkbox" >Receive Notifications<br><br>
+                    <div id="beforeclick" >Click to Subscribe for Notifications </div>
+                    <div id="statusy" hidden>You have Subscribed for Notifications! </div>
+                    <div id="statusn" hidden>You have Not Subscribed for Notifications! </div>
+                    
+
+
+                    
+                    
+                    </center>   
+                
+                </div>
+                
+                
+                
+                
+            </div>
+        
+        <script src="app_1.js"></script>
+    </body>
+    
+</html>
+    
