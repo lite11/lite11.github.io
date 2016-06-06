@@ -10,7 +10,8 @@
          <style>
            body,html{
               width:100%;height:100%;
-               padding:0;margin:0; background-color:#e5e5e5;
+               padding:0;margin:0; //background-color:#e5e5e5;
+                   background-color:#097492;
                    
            overflow:hidden;}
         
@@ -65,7 +66,7 @@
                   float:left
              }
              
-             img{
+             img#menu1{
                  padding-top: 17px;
                   padding-left: 12px;
                   padding-right: 17px;
@@ -74,19 +75,79 @@
                      
              }
              
+               img#my{
+                // padding-top: 17px;
+                 // padding-left: 12px;
+                 // padding-right: 17px;
+                 // padding-bottom: 5px;
+                  //float:right;
+                    width:100%;
+                    height:250px;
+                   // margin:5px;
+             }
+             
+             img#inc{
+                 padding-top: 17px;
+                  padding-left: 17px;
+                  padding-right: 17px; 
+             }
+             
+             
              div#content{
                  color:black;
-                 font-size:18px; 
+                 font-size:25px; 
                  padding:1px; 
              }
              
     </style>
-    <script>
+   <script>
+       var s;
+    localStorage.setItem("FIncluded","icons/21.png");
+    localStorage.setItem("HIncluded","icons/iconsfinder/1462225969_City.png");
+    localStorage.setItem("MIncluded","icons/iconsfinder/1462226156_fastfood_512pxGREY.png");
+    localStorage.setItem("star","icons/iconsfinder/1462225884_star.png");
+    function getstars(para){
+        s="";
+        for(i=0;i<para;i++)
+            s+= " <img src="+localStorage.getItem("star")+"> "; 
+        return s;
+        
+    }
+    
+    function getpics(para)
+    {
+      if(para=="FIncluded")
+      return "<img src="+localStorage.getItem("FIncluded")+">";
+      
+          
+     else if(para=="HIncluded")
+      return "<img src="+localStorage.getItem("HIncluded")+">";
+  
+  else if(para=="MIncluded")
+      return "<img id='inc' src="+localStorage.getItem("MIncluded")+">";
+    
+      else
+      return "  ";
+    }
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var v1 = getParameterByName('val');
+
+//alert("value is"+v1);
+
         $(document).ready(function(){
         
          $.ajax({
 
-   url: 'holiday.json',
+   url: 'icons/myholidays.json',
     type: 'get',
     dataType: 'json',
     //data: {
@@ -104,17 +165,36 @@
     success: function(data){
        //data = JSON.parse(data);
 
- 
+
+
      var out='';
-      for(i = 0; i < data.length; i++) {
+      //for(i = 0; i < data.length; i++) {
         
+       //if(i==v1){
+       i=v1;
+       //alert("value is i "+i);
+        for(var j=0, i=v1;j<2 && i==v1;j++)
+        {
+            out+="<b>"+data[i][j].Detail+"</b><br><br><img id='my' src="+data[i][j].image+" ><br><br><center>"+data[i][j].DurationD+" <img  src='icons/iconsfinder/1462226371_sun.png'> / "+data[i][j].DurationN+" <img src='icons/iconsfinder/1462226669_moon_fill.png'><br><br>Included  "+getpics(data[i][j].FlightIn)+"       "+getpics(data[i][j].HotelIn)+"       "+getpics(data[i][j].MealsIn)+"<br><br><sub>from</sub> "+data[i][j].Price+"<img src='icons/iconsfinder/1462226759_Indian_Rupee_symbol.png'><br><br>Rating "+getstars(data[i][j].stars)+"</center><br><hr>";
+            
+        }
         
-        
-      out+= /*i+data[i].minimumPricePackageClassId*/"<br><b>Details: </b>"+data[i].packageDetail.pkgName+"<br><b>StartingPrice:</b> "+data[i].minimumStartingPrice+/*"<br> <b>PackageDetail adultAdvancePayable:</b> "+data[i].packageDetail.adultAdvancePayable+"<br><b> AdultAdvancePayablePer:</b> "+data[i].packageDetail.adultAdvancePayablePer*/"<br>"+"<img src="+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.tcilMstHolidayAccomodationImageCollection[0].imagePath+">"+" <br><b>AdvancePaymentDiscAmt:</b> "+data[i].packageDetail.advancePaymentDiscAmt+/*"<br><b> ChildAdvancePayable:</b> "+data[i].packageDetail.childAdvancePayable+data[i].packageDetail.childAdvancePayablePer*/"<br><b> Duration: </b>"+data[i].packageDetail.duration+"<br><b> FullPaymentDiscAmt: </b>"+data[i].packageDetail.fullPaymentDiscAmt+"<br><b> AdvancePayable:</b> "+data[i].packageDetail.isAdvancePayable+"<br><b> FlightIncluded:</b> "+data[i].packageDetail.isFlightIncluded+/*"<br><b> FullPayable:</b> "+data[i].packageDetail.isFullPayable*/" <br><b>HotelIncluded:</b> "+data[i].packageDetail.isHotelIncluded+" <br><b>MealsIncluded:</b> "+data[i].packageDetail.isMealsIncluded+" <br><b>PackageClassDelux:</b> "+data[i].packageDetail.isPackageClassDelux+" <br><b>PackageClassPremium:</b> "+data[i].packageDetail.isPackageClassPremium+data[i].packageDetail.isPackageClassStandard+"<br><b> SightseeingIncluded:</b> "+data[i].packageDetail.isSightseeingIncluded+" <br><b>SpecialDiscount: </b>"+data[i].packageDetail.isSpecialDiscount+"<br><b> TcilRecomended:</b> "+data[i].packageDetail.isTcilRecomended+"<br><b>TransferIncluded: </b>"+data[i].packageDetail.isTransferIncluded+"<br><b>VisaIncluded:</b> "+data[i].packageDetail.isVisaIncluded+/*data[i].packageDetail.languageId.name"<b>PackageDetails</b>"+/*data[i].packageDetail.packageId+data[i].packageDetail.packageThumbnailImage*/" <br><b>PlacesCovered:</b> "+data[i].packageDetail.placesCovered+"<br>"
-      +"<b>HolidayAccomodation</b><br>"+"<b> Address:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.address+"<br> <b>City:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.city+/*"<br><b> Country:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.country+" <br><b>HotelID:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.hotelId*/" <br><b>HotelName:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.hotelName+"<br><b>Overview:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.overview+/*data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.starRating*/"<br><b>State:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.state+"<hr>";
-      }
+        //alert("value is i and j "+i+" "+j);
+    
+      /*  
+      out+= /*i+data[i].minimumPricePackageClassId*///"<br><b>Details: </b>"+data[i].packageDetail.pkgName+"<br><b>StartingPrice:</b> "+data[i].minimumStartingPrice+/*"<br> <b>PackageDetail adultAdvancePayable:</b> "+data[i].packageDetail.adultAdvancePayable+"<br><b> AdultAdvancePayablePer:</b> "+data[i].packageDetail.adultAdvancePayablePer*/"<br>"+"<img src="+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.tcilMstHolidayAccomodationImageCollection[0].imagePath+">"+" <br><b>AdvancePaymentDiscAmt:</b> "+data[i].packageDetail.advancePaymentDiscAmt+/*"<br><b> ChildAdvancePayable:</b> "+data[i].packageDetail.childAdvancePayable+data[i].packageDetail.childAdvancePayablePer*/"<br><b> Duration: </b>"+data[i].packageDetail.duration+"<br><b> FullPaymentDiscAmt: </b>"+data[i].packageDetail.fullPaymentDiscAmt+"<br><b> AdvancePayable:</b> "+data[i].packageDetail.isAdvancePayable+"<br><b> FlightIncluded:</b> "+data[i].packageDetail.isFlightIncluded+/*"<br><b> FullPayable:</b> "+data[i].packageDetail.isFullPayable*/" <br><b>HotelIncluded:</b> "+data[i].packageDetail.isHotelIncluded+" <br><b>MealsIncluded:</b> "+data[i].packageDetail.isMealsIncluded+" <br><b>PackageClassDelux:</b> "+data[i].packageDetail.isPackageClassDelux+" <br><b>PackageClassPremium:</b> "+data[i].packageDetail.isPackageClassPremium+data[i].packageDetail.isPackageClassStandard+"<br><b> SightseeingIncluded:</b> "+data[i].packageDetail.isSightseeingIncluded+" <br><b>SpecialDiscount: </b>"+data[i].packageDetail.isSpecialDiscount+"<br><b> TcilRecomended:</b> "+data[i].packageDetail.isTcilRecomended+"<br><b>TransferIncluded: </b>"+data[i].packageDetail.isTransferIncluded+"<br><b>VisaIncluded:</b> "+data[i].packageDetail.isVisaIncluded+/*data[i].packageDetail.languageId.name"<b>PackageDetails</b>"+/*data[i].packageDetail.packageId+data[i].packageDetail.packageThumbnailImage*/" <br><b>PlacesCovered:</b> "+data[i].packageDetail.placesCovered+"<br>"
+     // +"<b>HolidayAccomodation</b><br>"+"<b> Address:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.address+"<br> <b>City:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.city+/*"<br><b> Country:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.country+" <br><b>HotelID:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.hotelId*/" <br><b>HotelName:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.hotelName+"<br><b>Overview:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.overview+/*data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.starRating*/"<br><b>State:</b> "+data[i].packageDetail.tcilHolidayAccomodationCollection[0].accomodationHotelId.state+"<hr>";
+   //  }
+      //document.getElementById("load").innerHTML=out;
 
-
+/*var para = document.createElement("p");
+var node = document.createTextNode(out);
+para.appendChild(node);
+            //added
+var element = document.getElementById("d"+eid);
+var node = document.createTextNode(out);
+element.appendChild(node);
+*/
 
  document.getElementById("content").innerHTML=out;
 
@@ -132,8 +212,8 @@
         <header class="header">
             <a href="menu.html"><img src="icons/1460037806_Hamburger.png" id="menu"  alt=""/></a>
              
-            <img src="icons/1457957246_shopping-cart.png" alt=""/>
-            <img src="icons/1457957259_Profile01.png" alt=""/>
+           <!-- <img src="icons/1457957246_shopping-cart.png" id="menu1" alt=""/>-->
+           <a href="signup.html"><img src="icons/1457957259_Profile01.png" id="menu1" alt=""/></a>
             
             
            
