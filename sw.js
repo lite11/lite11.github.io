@@ -14,7 +14,7 @@ var urlstocache1=[
    //'manifest.json',
    'home.html',
    'homecss.css',
-   
+   'index.html',
   
    'icons/newlogo.png',
    'icons/1457957259_Profile01.png',
