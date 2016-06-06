@@ -15,6 +15,7 @@ var urlstocache1=[
    'home.html',
    'homecss.css',
    'index.html',
+   'signup.html',
   
    'icons/newlogo.png',
    'icons/1457957259_Profile01.png',
