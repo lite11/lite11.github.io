@@ -4,9 +4,7 @@
       
        var  _API_KEY='AIzaSyBnxKRl7lL4adQReCak7Nf4f72S_3Dbugk';
  
-   navigator.serviceWorker.register('sw.js',{
- scope: '/lite11/'
-  }).then(function(r) {
+   navigator.serviceWorker.register('sw.js').then(function(r) {
        console.log(r);
     console.log("Registeration successful");
    }).catch(function(r) {
