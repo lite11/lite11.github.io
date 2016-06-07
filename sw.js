@@ -151,12 +151,12 @@ self.addEventListener('activate', function(event) {
 });
 
 
-
 self.addEventListener('fetch', function(event) {
   console.log('Handling fetch event for', event.request.url);
 
   event.respondWith(
-   
+    // caches.match() will look for a cache entry in all of the caches available to the service worker.
+    // It's an alternative to first opening a specific named cache and then matching on that.
    
     caches.match(event.request).then(function(response) {
       if (response) {
@@ -164,18 +164,17 @@ self.addEventListener('fetch', function(event) {
 
         return response;
       }
-  
-     
-     return fetch(event.request,{ mode: 'no-cors' }).then(function(response) {
+      
+      return fetch(event.request,{ mode: 'no-cors' }).then(function(response) {
         console.log('Response from network is:', response.url);
-//
-       return caches.open('CURRENT_CACHES333').then(function(cache) {
+
+       return caches.open('CURRENT_CACHES111').then(function(cache) {
             cache.put(event.request.url, response.clone());
             console.log('[ServiceWorker] Fetched&Cached Data');
             return response;
         });
       }).catch(function(error) {
-       
+        
         console.error('Fetching failed:', error);
 
         throw error;
@@ -183,6 +182,8 @@ self.addEventListener('fetch', function(event) {
   })
   );
 });
+
+
 
 
 self.addEventListener('push', function(event) {  
