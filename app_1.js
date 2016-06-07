@@ -2,7 +2,7 @@
 
 if ('serviceWorker' in navigator) {
      
-    var _API_KEY="AIzaSyBnxKRl7lL4adQReCak7Nf4f72S_3Dbugk";
+    var _API_KEY="AIzaSyC85aC3LWoMmHLdZMiVJVb8afENp02_Cf0";
 
   navigator.serviceWorker.register('sw.js').then(function(r) {
       console.log(r);
