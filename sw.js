@@ -19,7 +19,7 @@ var urlstocache1=[
    'icons/newlogo.png',
    'icons/1457957259_Profile01.png',
    'icons/1457957246_shopping-cart.png',
-   //'icons/holiday-palm-isle-icon.png',
+   
    'icons/3dots.png',
    
 //added
