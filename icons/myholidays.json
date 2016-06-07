@@ -1,0 +1,22 @@
+[
+   [{"Detail":"Munnar Tea Hills","image":"icons/myimages/munnar.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":11500,"stars":4},
+    {"Detail":"Kerala Back Waters","image":"icons/myimages/backwater.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"NotIncluded","Price":25500,"stars":5}],
+   [{"Detail":"Australia Wonders","image":"icons/myimages/aus.jpg","DurationD":8,"DurationN":7,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"NotIncluded","Price":22000,"stars":4},
+      {"Detail":"Paris Holidays","image":"icons/myimages/paris.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"NotIncluded","Price":310500,"stars":5}  ],
+   [{"Detail":"Nepal Holidays","image":"icons/myimages/nepal.jpg","DurationD":3,"DurationN":2,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":10500,"stars":5},
+      {"Detail":"SriLanka Holidays","image":"icons/myimages/srilanka.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":11500,"stars":5}  ],
+  [{"Detail":"Luxurious India","image":"icons/myimages/lux1.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":50500,"stars":3},
+      {"Detail":"India Holidays","image":"icons/myimages/lux2.jpg","DurationD":5,"DurationN":5,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":69500,"stars":4}  ],
+   [{"Detail":"Munnar Tea Hills","image":"icons/myimages/munnar.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":11500,"stars":4},
+    {"Detail":"Kerala Back Waters","image":"icons/myimages/backwater.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":25500,"stars":4}],
+  [{"Detail":"Goa Holidays","image":"icons/myimages/Goa.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":50500,"stars":4},
+      {"Detail":"Goa Luxury Holidays","image":"icons/myimages/goa2.jpg","DurationD":5,"DurationN":5,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":69500,"stars":5}  ],
+  [{"Detail":"Cruise Holidays","image":"icons/myimages/cruise1.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":505000,"stars":4},
+      {"Detail":"Go on Cruise","image":"icons/myimages/cruise2.jpg","DurationD":5,"DurationN":5,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"MIncluded","Price":695000,"stars":4}  ],
+  [{"Detail":"Australia Wonders","image":"icons/myimages/aus.jpg","DurationD":8,"DurationN":7,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"NotIncluded","Price":22000,"stars":4},
+      {"Detail":"Paris Holidays","image":"icons/myimages/paris.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"NotIncluded","Price":310500,"stars":4}  ],
+  [{"Detail":"Dubai Holidays","image":"icons/myimages/dubai1.jpg","DurationD":8,"DurationN":7,"FlightIn":"FIncluded","HotelIn":"HIncluded","MealsIn":"NotIncluded","Price":220000,"stars":5},
+      {"Detail":"Dubai Summer Festival","image":"icons/myimages/dubai2.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"MIncluded","Price":310500,"stars":4}  ],
+  [{"Detail":"Europe Holidays","image":"icons/myimages/euro1.jpg","DurationD":8,"DurationN":7,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"NotIncluded","Price":290000,"stars":4},
+      {"Detail":"Europe Lurury Holidays","image":"icons/myimages/euro2.jpg","DurationD":5,"DurationN":4,"FlightIn":"FIncluded","HotelIn":"NotIncluded","MealsIn":"NotIncluded","Price":370500,"stars":4}  ]
+]
