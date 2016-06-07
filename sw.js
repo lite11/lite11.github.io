@@ -11,7 +11,7 @@ var urlstocache1=[
    
    'app_1.js',
    
-   'home.html',
+   'icons/myholidays.json',
    
    'index.html',
    'signup.html',
