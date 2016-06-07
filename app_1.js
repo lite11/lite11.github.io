@@ -19,7 +19,7 @@ $(document).ready(function(){
                                 if($("#check").is(':checked'))
                         {
                             navigator.serviceWorker.ready.then(function(r) {  
-                            
+                            console.log(r);
                             console.log("sw ready,got perm will suscribe");
                             //subscribe
                            
