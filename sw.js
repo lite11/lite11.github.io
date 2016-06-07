@@ -43,7 +43,7 @@ var urlstocache1=[
    'icons/default-avatar-250x250.png'
 ];
 
-//////////////////////////////
+
 
 //index menu
  var CACHE_VERSION = 6;
