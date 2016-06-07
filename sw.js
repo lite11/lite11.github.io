@@ -25,7 +25,7 @@ var urlstocache1=[
 //added
    'icons/1457957259_Profile01.png',
    'icons/1460037806_Hamburger.png',
-   //'icons/1457957246_shopping-cart.png',
+   
    'icons/smalllogo.png',
    'menu.html',
    'appshell.html',
