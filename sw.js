@@ -165,7 +165,7 @@ self.addEventListener('fetch', function(event) {
         return response;
       }
       
-      return fetch(event.request,{ mode: 'no-cors' }).then(function(response) {
+      return fetch(event.request).then(function(response) {
         console.log('Response from network is:', response.url);
 
        return caches.open('CURRENT_CACHES111').then(function(cache) {
