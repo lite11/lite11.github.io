@@ -1,48 +1,31 @@
 
 
-window.addEventListener('load', function() {
-
-  var  _API_KEY='AIzaSyBnxKRl7lL4adQReCak7Nf4f72S_3Dbugk';
-
-     // var outputElement = document.getElementById('output');
 if ('serviceWorker' in navigator) {
-               
-  navigator.serviceWorker.register('sw.js', {
+     
+      var  _API_KEY='AIzaSyBnxKRl7lL4adQReCak7Nf4f72S_3Dbugk';
+
+  navigator.serviceWorker.register {'sw.js',{
     scope: '/lite11/'
-  }).then(function(r) {
-      //console.log(r);
+  }).then(function(r) {.then(function(r) {
+      console.log(r);
    console.log("Registeration successful");
-    /*r.pushManager.subscribe({
-            userVisibleOnly: true
-        }).then(function(sub) {
-            console.log('Subscription successful');
-            console.log('endpoint:', sub.endpoint);
-            console.log('subscriptionID:', sub.subscriptionId);
-                    sendSub(sub);
+  }).catch(function(r) {
+       console.log(r);
+    console.log("Registeration unsuccessful");
+  });
+}
 
-        }).catch(function(r){
-            console.log('UnSubscription successful');
-        });*/
-  //new
-  if (!('showNotification' in ServiceWorkerRegistration.prototype)) {  
-    console.warn('Notifications aren\'t supported.');  
-    return;  
-  }
-
-  // Check the current Notification permission.  
-  // If its denied, it's a permanent block until the  
-  // user changes the permission  
-  if (Notification.permission === 'denied') {  
-    console.warn('The user has blocked notifications.');  
-    return;  
-  }
-
-  // Check if push messaging is supported  
-  if (!('PushManager' in window)) {  
-    console.warn('Push messaging isn\'t supported.');  
-    return;  
-  }
-          r.pushManager.subscribe({userVisibleOnly: true})
+$(document).ready(function(){
+                        $("#check").click(function(){
+                            $("#beforeclick").hide();
+                                if($("#check").is(':checked'))
+                        {
+                            navigator.serviceWorker.ready.then(function(r) {  
+                            console.log(r);
+                            console.log("sw ready,got perm will suscribe");
+                            //subscribe
+                           
+                            r.pushManager.subscribe({userVisibleOnly: true})
             .then(function(subscription) {
                 if(subscription.endpoint.startsWith("https://android.googleapis.com/gcm/send")){
                     var parts = subscription.endpoint.split("/");
@@ -162,85 +145,7 @@ if ('serviceWorker' in navigator) {
 }
 });
 
-
-/*
-function sendSub(pushSubscription) {
-  console.log(pushSubscription);
-  //get endpoint
-  var endPoint = pushSubscription.endpoint.slice(pushSubscription.endpoint.lastIndexOf('/')+1);
-   fetch("https://mobiforge.com/subscribe/"+endPoint).then(function(res) {
-      res.json().then(function(data) {
-        console.log(data);
-      }).catch(function(e) {
-          console.error('Error sending subscription to server:', e);
-        }); 
-    });
-}
-});
-
-  if ('Notification' in window) {
-    // Notifications supported! Yay!
-    
-        // Check for permission
-    if(Notification.permission=='granted') {
-        // Get service worker to show notification
-         self.registration.showNotification(notificationData.data.title, {  
-            body: notificationData.data.body,
-            icon: 'favicon.ico' 
-        }); 
-    }
-    else {
-      //We need to ask permission
-      Notification.requestPermission(function(permission) {
-        if(permission=='granted') {
-          self.registration.showNotification(notificationData.data.title, {  
-            body: notificationData.data.body,
-            icon: 'favicon.ico' 
-          });  
-        }          
-      });
-    }
-    
-    
-  } 
-  
-      self.addEventListener('notificationclick', function(e) {
-      if (clients.openWindow) {
-        clients.openWindow(notificationData.data.url);
-      }
-    });
-    
-    */
-   //end 
-
-/*
- * 
- if ('serviceWorker' in navigator) {
-    console.log('Service Worker is supported');
-    navigator.serviceWorker.register('sw.js').then(function(reg) {
-        console.log(':^)', reg);
-        reg.pushManager.subscribe({
-            userVisibleOnly: true
-        }).then(function(sub) {
-            console.log('endpoint:', sub.endpoint);
-        });
-    }).catch(function(error) {
-        console.log(':^(', error);
-    });
-}
-
-
  
-
-      navigator.serviceWorker.register('service-worker.js', { scope: './' })
-        .then(function(r) {
-          console.log('registered service worker');
-        })
-        .catch(function(whut) {
-          console.error('uh oh... ');
-          console.error(whut);
-        });
-  */     
       
     
 //current
