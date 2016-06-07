@@ -1,5 +1,5 @@
  
- //home
+ 
      var CACHE_VERSION = 7;
           var CURRENT_CACHES111 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
@@ -79,7 +79,7 @@ var urlstocache3=[
    
    
    
-   'icons/portraitmode.png',
+   
    
    //manifest icons
    'icons/newlogo - Copy (2).png',
