@@ -91,7 +91,7 @@ var urlstocache3=[
    'icons/newlogo.png',
    'icons/newlogo225x225.png',
    
-   //new signup
+   
    
    'signup.html'
    
