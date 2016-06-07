@@ -29,6 +29,16 @@ var urlstocache1=[
    'icons/smalllogo.png',
    'menu.html',
    'appshell.html',
+   'appshell.html?val=0',
+   'appshell.html?val=1',
+   'appshell.html?val=2',
+   'appshell.html?val=3',
+   'appshell.html?val=4',
+   'appshell.html?val=5',
+   'appshell.html?val=6',
+   'appshell.html?val=7',
+   'appshell.html?val=8',
+   'appshell.html?val=9',
    'icons/m7.jpg',
    'icons/default-avatar-250x250.png'
 ];
