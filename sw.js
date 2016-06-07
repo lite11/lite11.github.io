@@ -58,8 +58,7 @@ var urlstocache2=[
    'holiday.json',
   'icons/blueplane.gif'
   
-   //'index.html',
-    //  'indexcss.css'
+   
 
    
    
@@ -79,7 +78,7 @@ var urlstocache3=[
     
    
    
-   'default.html',
+   
    'icons/portraitmode.png',
    
    //manifest icons
