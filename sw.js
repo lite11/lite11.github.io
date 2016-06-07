@@ -1,6 +1,6 @@
  
  //home
-     var CACHE_VERSION = 6;
+     var CACHE_VERSION = 7;
           var CURRENT_CACHES111 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
                                 };
@@ -46,7 +46,7 @@ var urlstocache1=[
 
 
 //index menu
- var CACHE_VERSION = 6;
+ var CACHE_VERSION = 7;
           var CURRENT_CACHES222 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
                                 };
@@ -69,7 +69,7 @@ var urlstocache2=[
 ///////////////////////////////////////////////
 
 //default
- var CACHE_VERSION = 6;
+ var CACHE_VERSION = 7;
           var CURRENT_CACHES333 = {
            prefetch: 'prefetch-cache-v' + CACHE_VERSION
                                 };
