@@ -1,41 +1,41 @@
 {
-    "name": "Thomas Cook Lite",
-    "short_name": "Thomas Cook Lite",
+    "name": "Lite",
+    "short_name": " Lite",
     "icons": [
        {
-      "src": "icons/newlogo - Copy (2).png",
+      "src": "",
       "sizes": "32x32",
       "type": "image/png"
     },
      {
-      "src": "icons/newlogo - Copy (3).png",
+      "src": "",
       "sizes": "48x48",
       "type": "image/png"
     },
     
      {
-      "src": "icons/newlogo - Copy.png",
+      "src": "",
       "sizes": "64x64",
       "type": "image/png"
     },
     
      {
-      "src": "icons/newlogo - Copy (4).png",
+      "src": "",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "icons/newlogo144x144.png",
+      "src": "",
       "sizes": "144x144",
       "type": "image/png"
     },
      {
-      "src": "icons/newlogo.png",
+      "src": "",
       "sizes": "198x198",
       "type": "image/png"
     },
      {
-      "src": "icons/newlogo225x225.png",
+      "src": "",
       "sizes": "225x225",
       "type": "image/png"
     }
